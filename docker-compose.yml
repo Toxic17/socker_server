@@ -1,0 +1,11 @@
+services:
+ php:
+    build: 
+      context: config
+      dockerfile: php.dockerfile
+    ports:
+      - "120:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/conf.d/custom.ini
+    
